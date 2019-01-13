@@ -2,125 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7628e25-bb65-4609-bd01-ee8b1a476a0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/QQ-weixin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/adv01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/adv02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/banner01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/banner02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/banner03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/bar_code.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/cat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/clock.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/clock.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/edit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/find-password.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods001.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods002.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods003.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods004.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods005.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods006.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods007.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods008.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods009.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/goods_450.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/icons02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/interval_line.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/left_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/login_banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/logo02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/pay_icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/pic_code.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/register_banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/shine.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/shop_cart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/slide01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/slide02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/slide03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/slide04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/stars.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/success.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/images/time_count_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/cart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/find_password.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/10.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/12.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/14.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/15.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/16.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/7.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/8.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods/9.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/goods_judge.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/axios-0.18.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/detail.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/goods_judge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/host.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/jquery-1.12.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/oauth_callback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/register.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/slide.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/user_center_info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/user_center_site.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/vue-2.5.16.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/list_origin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/oauth_callback.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/order_success.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/place_order.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/success_verify_email.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/user_center_info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/user_center_order.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/user_center_pass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/user_center_site.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_mall/new_mall/settings/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_mall/new_mall/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_mall/new_mall/utils/exceptions.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_mall/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_mall/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_mall/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_mall/.idea/new_mall.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/new_mall/.idea/workspace.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/new_mall/settings.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/settings/dev.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/__init__.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/admin.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/admin.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/apps.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/apps.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/migrations/__init__.py" afterPath="$PROJECT_DIR$/new_mall/celery_tasks/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/models.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/tests.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/tests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/new_mall/users/views.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/apps/users/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Newmall.iml" afterPath="$PROJECT_DIR$/.idea/Newmall.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_mall/manage.py" afterPath="$PROJECT_DIR$/new_mall/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_mall/new_mall/__init__.py" afterPath="$PROJECT_DIR$/new_mall/new_mall/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -177,6 +59,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -194,7 +79,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="48" />
     <option name="y" value="52" />
     <option name="width" value="797" />
@@ -308,10 +193,19 @@
       <option name="presentableId" value="Default" />
       <updated>1547220307100</updated>
     </task>
+    <task id="LOCAL-00001" summary="项目配置">
+      <created>1547351010547</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547351010547</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="52" width="880" height="819" extended-state="6" />
+    <frame x="48" y="52" width="880" height="819" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28297362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -339,6 +233,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="项目配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
