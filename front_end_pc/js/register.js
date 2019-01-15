@@ -2,9 +2,9 @@ var vm = new Vue({
     el: '#app',
     data: {
         // var host = 'http://127.0.0.1:8000';
-        // host: 'http://127.0.0.1:8000',
+        host: 'http://127.0.0.1:8000',
         // host: host,
-        host,
+        // host,
         error_name: false,
         error_password: false,
         error_check_password: false,
@@ -114,7 +114,7 @@ var vm = new Vue({
 
             this.sending_flag = true;  // 正在下发短信
 
-            axios.get(this.host + '/sms_codes/'+ this.mobile +'/')
+            axios.get(this.host + '/sms_codes/' + this.mobile + '/')
                 .then(response => {
                     console.log('获取短信验证码成功');
 
@@ -153,56 +153,39 @@ var vm = new Vue({
             this.check_phone();
             this.check_sms_code();
             this.check_allow();
-            // alert('注册')
 
-            // 演示功能: 测试使用
-            localStorage.name = 'localStorage'
-            sessionStorage.name2 = 'sessionStorage'
-
-            if (!this.error_name &&
+            if (this.error_name === false &&
                 this.error_password === false &&
                 this.error_check_password === false &&
                 this.error_phone === false &&
                 this.error_sms_code === false &&
                 this.error_allow === false) {
 
-                // 发post请求
-                let data = {
+                // alert('注册');
+                var data = {
                     username: this.username,
                     password: this.password,
                     password2: this.password2,
                     mobile: this.mobile,
                     sms_code: this.sms_code,
-                    allow: this.allow,
+                    allow: this.allow
                 };
-
                 axios.post(this.host + '/users/', data)
                     .then(response => {
-
-                        // todo: 保存用户登录状态 user_id username token
-                        localStorage.clear();
-                        sessionStorage.clear();
-
-                        localStorage.user_id = response.data.id
-                        localStorage.username = response.data.username
-                        localStorage.token = response.data.token
-
-                        // 注册成功, 进入到首页
-                        location.href = '/index.html'
+                        location.href = '/index.html';      // 跳转到首页
                     })
                     .catch(error => {
-                        console.log(error);
+                        alert(error.response.status)
                         if (error.response.status === 400) {
                             if ('non_field_errors' in error.response.data) {
                                 this.error_sms_code = true;
-                                // 短信验证码不正确
                                 this.error_sms_code_message = error.response
                                     .data.non_field_errors[0];
                             } else {
-                                alert('注册失败')
+                                alert('注册失败1')
                             }
                         } else {
-                            alert('注册失败')
+                            alert('注册失败2')
                         }
                     })
             }

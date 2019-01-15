@@ -38,8 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
     'rest_framework',
+    # 创建应用
+    'users',
+    'verifications',
+
+    'celery_tasks',
+    #添加跨域CORS
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +56,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #添加跨域中间层
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'new_mall.urls'
@@ -104,7 +113,16 @@ CACHES = {
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
-    }
+    },
+    #保存手机短信验证码
+    "sms_codes": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+
 }
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
@@ -186,8 +204,23 @@ LOGGING = {
         },
     }
 }
+#
+# REST_FRAMEWORK = {
+#     # 异常处理
+#     # 'EXCEPTION_HANDLER': 'new_mall.utils.exceptions.my_exception_handler',
+# }
 
-REST_FRAMEWORK = {
-    # 异常处理
-    'EXCEPTION_HANDLER': 'new_mall.utils.exceptions.my_exception_handler',
-}
+#自定义模型类
+AUTH_USER_MODEL = 'users.User'
+
+
+# 添加跨域白名单
+CORS_ORIGIN_WHITELIST = (
+    #指定可以跨域访问的服务器
+        '127.0.0.1:8080',
+        'localhost:8080',
+        'www.meiduo.site:8080',
+        'api.meiduo.site:8000'
+    )
+#指定在跨域访问中,后台是否支持cookie操作
+CORS_ALLOW_CREDENTIALS = True
