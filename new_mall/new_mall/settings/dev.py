@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+import datetime
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,7 +26,12 @@ SECRET_KEY = '7g7ushbt(f#z)t7ez&x8q1px#!2f@)_)m1qhz7$997r6((yj)w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'api.meiduo.site',
+    '127.0.0.1',
+    'localhost',
+    'www.meiduo.site',
+]
 
 
 # Application definition
@@ -42,6 +47,8 @@ INSTALLED_APPS = [
     # 创建应用
     'users',
     'verifications',
+    #QQ登录
+    'oauth',
 
     'celery_tasks',
     #添加跨域CORS
@@ -205,10 +212,23 @@ LOGGING = {
     }
 }
 #
-# REST_FRAMEWORK = {
-#     # 异常处理
-#     # 'EXCEPTION_HANDLER': 'new_mall.utils.exceptions.my_exception_handler',
-# }
+REST_FRAMEWORK = {
+    # 异常处理
+    # 'EXCEPTION_HANDLER': 'new_mall.utils.exceptions.my_exception_handler',
+
+    #jwt单点登录
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    #添加两个字段(user_id,username)
+'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
+}
 
 #自定义模型类
 AUTH_USER_MODEL = 'users.User'
@@ -224,3 +244,14 @@ CORS_ORIGIN_WHITELIST = (
     )
 #指定在跨域访问中,后台是否支持cookie操作
 CORS_ALLOW_CREDENTIALS = True
+
+#扩展登录接口,支持手机号码登录
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UsernameMobileAuthBachend',
+]
+
+# 配置QQ登录文件
+QQ_CLIENT_ID = '101474184'									# APP ID
+QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'		# APP Key
+QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html' # 登录成功的回调地址
+

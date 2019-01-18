@@ -2,7 +2,7 @@ import re
 
 from django_redis import get_redis_connection
 from rest_framework import serializers
-
+from rest_framework_jwt.settings import api_settings
 from users.models import User
 
 
@@ -11,10 +11,11 @@ class CreateUserSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(label='确认密码',write_only=True,)
     sms_code = serializers.CharField(label='短信验证码',write_only=True,)
     allow =  serializers.BooleanField(label='同意协议',write_only=True)
-    print('xuliehua')
+    token = serializers.CharField(label='登录状态token', read_only=True)
+
     class Meta:
         model = User
-        fields = ('id','username','mobile','password2','allow','password','sms_code')
+        fields = ('id','username','mobile','password2','allow','password','sms_code','token')
         extra_kwargs = {
             'username':{
                 'min_length':5,
@@ -75,11 +76,20 @@ class CreateUserSerializer(serializers.ModelSerializer):
 
     def create (self,validated_data):
 
-        return User.objects.create_user(
-            username=validated_data.get('username'),
-            password=validated_data.get('password'),
-            mobile=validated_data.get('mobile')
+        user = User.objects.create_user(
+                username=validated_data.get('username'),
+                password=validated_data.get('password'),
+                mobile=validated_data.get('mobile') )
 
-        )
-#
+        #注册成功自动登录,需要生成jwt并返回给客户端
+        #导包:from rest_framework_jwt.settings import api_settings
 
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER  # 生payload部分的方法
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER  # 生成jwt的方法
+
+        # user :登录的用户对象
+        payload = jwt_payload_handler(user)  # 生成payload, 得到字典
+        token = jwt_encode_handler(payload)  # 生成jwt字符串
+        user.token = token
+
+        return user

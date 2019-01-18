@@ -27,7 +27,10 @@ var vm = new Vue({
         var code = this.get_query_string('code');
         // alert(code)
 
-        axios.get(this.host + '/oauth/qq/user/?code=' + code)
+        axios.get(this.host + '/oauth/qq/user/?code=' + code,{
+            responseType:'json',
+            withCredentials:true
+        })
             .then(response => {
                 if (response.data.token){ // 用户已绑定, 并登录成功
                     // todo: QQ登录成功, 保存登录成功的jwt
@@ -156,13 +159,14 @@ var vm = new Vue({
             if(this.error_password == false
                && this.error_phone == false
                && this.error_sms_code == false) {
-
+                 console.log(this.sms_code)
                 // 发请求绑定openid和美多用户
                 axios.post(this.host + '/oauth/qq/user/', {
                         password: this.password,
                         mobile: this.mobile,
                         sms_code: this.sms_code,
-                        openid: this.openid
+                        openid: this.openid,
+
                     })
                     .then(response => {
                     	// 绑定成功，即登录成功，需要记录用户登录状态
@@ -184,6 +188,7 @@ var vm = new Vue({
                         }
                     })
             }
+
         }
     }
 });

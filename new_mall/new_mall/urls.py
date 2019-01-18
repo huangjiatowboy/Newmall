@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('new_mall.apps.verifications.urls')),
     url(r'^', include('new_mall.apps.users.urls')),
+    url(r'^', include('new_mall.apps.oauth.urls')),
 
 ]
