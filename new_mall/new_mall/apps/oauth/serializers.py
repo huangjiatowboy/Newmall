@@ -11,15 +11,19 @@ class QQUserSerializer(serializers.Serializer):
     '''
     openid= serializers.CharField(label='openid',write_only=True)
     password = serializers.CharField(label='密码',max_length=20,min_length=8,write_only=True)
-    sms_code = serializers.IntegerField(label='短信验证码',read_only=True)
+    sms_code = serializers.CharField (label='短信验证码')
     mobile = serializers.RegexField(label='手机号',regex=r'^1[3-9]\d{9}$',write_only=True)
 
+
+
     def validate(self,attrs):
+
+
         '''校验'''
         print(attrs)
         mobile = attrs['mobile']
-        print(333)
-        # sms_code = attrs['sms_code']
+
+        sms_code = attrs['sms_code']
         password = attrs['password']
 
         #校验短信验证码
@@ -28,13 +32,13 @@ class QQUserSerializer(serializers.Serializer):
         # 2.使用手机号,获取短信验证码
         redis_sms_code = redis_conn.get('sms_%s' % mobile)
         # 3.校验手机号是否一致
-        # if redis_sms_code is None:
-        #
-        #     raise serializers.ValidationError({'message':'短信验证码无效'})
-        #
-        # if redis_sms_code.decode() !=sms_code:
-        #
-        #     raise serializers.ValidationError({'message':'短信验证码错误'})
+        if redis_sms_code is None:
+
+            raise serializers.ValidationError({'message':'短信验证码无效'})
+
+        if redis_sms_code.decode() !=sms_code:
+
+            raise serializers.ValidationError({'message':'短信验证码错误'})
 
         #查询用户
         # 1.通过手机号查询用户是否存在(存在)
@@ -67,7 +71,7 @@ class QQUserSerializer(serializers.Serializer):
         #绑定openid和美多用户:
         OAuthQQUser.objects.create(
             openid = openid,
-            user = user
+            user = user,
         )
 
         return user #返回美多用户

@@ -1,8 +1,10 @@
 from time import sleep
 
+# from celery_tasks import celery_app
+# # from celery_tasks.sms.yuntongxun.sms import CCP
+# from .yuntongxun.sms import CCP
 from celery_tasks.main import celery_app
 from celery_tasks.sms.yuntongxun.sms import CCP
-
 @celery_app.task(name='send_sms_code')
 def send_sms_code(mobile,sms_code):
 

@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from utils.models import BaseModel
+from new_mall.utils.models import BaseModel
 
 
 class OAuthQQUser(BaseModel):

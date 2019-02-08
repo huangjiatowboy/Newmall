@@ -42,7 +42,7 @@ class QQUserView(APIView):
 
         #提取code请求参数
         code = request.query_params.get('code')
-
+        print(code)
         if not code:
 
             return Response({'message':'缺少code'},status=status.HTTP_400_BAD_REQUEST)
@@ -68,6 +68,7 @@ class QQUserView(APIView):
         try:
 
             oauth_user = OAuthQQUser.objects.get(openid=openid)
+            print('oauth_user',oauth_user.user)
 
         except OAuthQQUser.DoesNotExist:
 
@@ -98,7 +99,7 @@ class QQUserView(APIView):
 
     def post(self,request):
         #绑定QQ
-
+        print(request.data)
         user_serializer = QQUserSerializer(data=request.data)
         #校验请求参数
         user_serializer.is_valid(raise_exception=True)

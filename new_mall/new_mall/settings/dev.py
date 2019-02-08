@@ -47,12 +47,19 @@ INSTALLED_APPS = [
     # 创建应用
     'users',
     'verifications',
-    #QQ登录
     'oauth',
+    'areas',
+    'goods',
+    'contents',
+    #QQ登录
+
 
     'celery_tasks',
     #添加跨域CORS
     'corsheaders',
+    #富文本
+    'ckeditor', #富文本编辑器
+    'ckeditor_uploader',  #富文本编辑起上传图片模块
 ]
 
 MIDDLEWARE = [
@@ -201,7 +208,7 @@ LOGGING = {
             'filename': os.path.join(os.path.dirname(BASE_DIR), "logs/meiduo.log"),  # 日志文件的位置
             'maxBytes': 300 * 1024 * 1024,
             'backupCount': 10,
-            'formatter': 'verbose'
+            'formatter': 'verbose',
         },
     },
     'loggers': {  # 日志器
@@ -222,6 +229,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
+
+    #分页设置
+    'DEFAULT_PAGINATION_CLASS': 'new_mall.utils.pagination.MyPageNumberPagination',
 }
 
 JWT_AUTH = {
@@ -240,7 +250,7 @@ CORS_ORIGIN_WHITELIST = (
         '127.0.0.1:8080',
         'localhost:8080',
         'www.meiduo.site:8080',
-        'api.meiduo.site:8000'
+        'api.meiduo.site:8000',
     )
 #指定在跨域访问中,后台是否支持cookie操作
 CORS_ALLOW_CREDENTIALS = True
@@ -255,3 +265,49 @@ QQ_CLIENT_ID = '101474184'									# APP ID
 QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'		# APP Key
 QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html' # 登录成功的回调地址
 
+# 配置邮箱信息
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.163.com'
+
+EMAIL_PORT = 25
+
+#发邮件的邮箱
+EMAIL_HOST_USER = 'huangmentowboy@163.com'
+
+#在邮箱中色织客户段授权密码
+EMAIL_HOST_PASSWORD = 'hzk012348'
+
+#收件人看到的发件人
+EMAIL_FROM = 'new_mall@163.com'
+
+
+# DEFAULT_FROM_EMAIL = 'huangmentowboy@163.com'
+
+REST_FRAMEWORK_EXTENSIONS ={
+    # 缓存时间
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 60,
+    # 缓存存储
+    'DEFAULT_USE_CACHE': 'default',
+}
+
+# 指定使用自定义的文件存储类
+DEFAULT_FILE_STORAGE = 'new_mall.utils.fastdfs.storage.FastDFSStorage'
+
+# 富文本编辑器ckeditor配置
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 工具条功能
+        'height': 300,  # 编辑器高度
+        # 'width': 300,    	# 编辑器宽
+    },
+}
+
+# 上传图片保存的路径，使用了FastDFS后，此路径用不到
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+# FastDFS 客户端配置文件相对路径
+FDFS_CLIENT_CONF = 'new_mall/utils/fastdfs/client.conf'
+
+# FastDFS服务器图片地址
+FDFS_URL = 'http://image.meiduo.site:8888/'

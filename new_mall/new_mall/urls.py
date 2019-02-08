@@ -21,5 +21,10 @@ urlpatterns = [
     url(r'^', include('new_mall.apps.verifications.urls')),
     url(r'^', include('new_mall.apps.users.urls')),
     url(r'^', include('new_mall.apps.oauth.urls')),
+    url(r'^', include('new_mall.apps.areas.urls')),
+    url(r'^', include('new_mall.apps.goods.urls')),
+    url(r'^', include('new_mall.apps.contents.urls')),
+    #添加富文本编辑器路由
+url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
 ]

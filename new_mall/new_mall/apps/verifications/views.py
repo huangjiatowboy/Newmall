@@ -39,6 +39,7 @@ class SmsCodeView(APIView):
         #保存日志
         logging.info('sms_code:%s' % sms_code)
         print('sms_code=',sms_code)
+        print(len(sms_code))
 
         #调用云通讯 5表示5分钟,1表示测试模版
         # CCP().send_template_sms(mobile,[sms_code,5],1)
